@@ -1,0 +1,80 @@
+{
+  "main function": {
+    "prefix": "main",
+    "body": [
+      "package main",
+      "",
+      "import (",
+      "\t\"fmt\"",
+      ")",
+      "",
+      "func main() {",
+      "\tfmt.Println(\"$1\")",
+      "}"
+    ]
+  },
+  "function": {
+    "prefix": "func",
+    "body": [
+      "func ${1:name}(${2:params}) ${3:return_type} {",
+      "\t$4",
+      "}"
+    ]
+  },
+  "method": {
+    "prefix": "method",
+    "body": [
+      "func (${1:receiver} ${2:type}) ${3:name}(${4:params}) ${5:return_type} {",
+      "\t$6",
+      "}"
+    ]
+  },
+  "if error": {
+    "prefix": "iferr",
+    "body": [
+      "if err != nil {",
+      "\t$1",
+      "}"
+    ]
+  },
+  "struct": {
+    "prefix": "struct",
+    "body": [
+      "type ${1:Name} struct {",
+      "\t$2",
+      "}"
+    ]
+  },
+  "interface": {
+    "prefix": "interface",
+    "body": [
+      "type ${1:Name} interface {",
+      "\t$2",
+      "}"
+    ]
+  },
+  "for range": {
+    "prefix": "forr",
+    "body": [
+      "for ${1:i}, ${2:v} := range ${3:slice} {",
+      "\t$4",
+      "}"
+    ]
+  },
+  "test function": {
+    "prefix": "test",
+    "body": [
+      "func Test${1:Name}(t *testing.T) {",
+      "\t$2",
+      "}"
+    ]
+  },
+  "http handler": {
+    "prefix": "handler",
+    "body": [
+      "func ${1:handlerName}(w http.ResponseWriter, r *http.Request) {",
+      "\t$2",
+      "}"
+    ]
+  }
+}

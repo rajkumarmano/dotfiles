@@ -1,0 +1,267 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette
+// reference: https://github.com/FlorianWoelki/.config/blob/main/zed/settings.json
+{
+  "icon_theme": "Monospace Icon Theme - Dark",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "lsp_document_colors": "inlay",
+  "inline_code_actions": false,
+  "search": {
+    "button": false,
+    "case_sensitive": true
+  },
+  // vim mode settings
+  "vim_mode": true,
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  // "cursor_blink": false,
+  "hard_tabs": false,
+  "soft_wrap": "editor_width",
+  "wrap_guides": [90],
+  "show_wrap_guides": true,
+  "show_whitespaces": "selection",
+  "ui_font_family": "Monaspace Neon",
+  "buffer_font_family": "Monaspace Neon",
+  "buffer_font_features": {
+    // Disable ligatures:
+    // "calt": false
+  },
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "tab_bar": {
+    "show": true
+  },
+  "scrollbar": {
+    "show": "never"
+  },
+  // Rainbow indentation
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware"
+  },
+  "preview_tabs": {
+    "enabled": false
+  },
+  "git": {
+    "git_gutter": "tracked_files",
+    "inline_blame": {
+      "enabled": true
+    }
+  },
+  "vim": {
+    "use_system_clipboard": "never"
+  },
+  "hide_mouse": "on_typing_and_movement",
+  // Will be triggered manually with `ctrl-x ctrl-c`.
+  "show_edit_predictions": false,
+  "inlay_hints": {
+    "enabled": false
+  },
+  "theme": {
+    "mode": "system",
+    "light": "Dracula",
+    "dark": "One Dark Pro"
+  },
+  // use relative line numbers
+  "relative_line_numbers": true,
+  //auto-install extension
+  "auto_install_extensions": {
+    "html": true,
+    "dockerfile": true,
+    "docker-compose": false
+  },
+  // auto save
+  "autosave": "on_focus_change",
+  "format_on_save": "on",
+  "code_actions_on_format": {
+    "source.organizeImports": true,
+    "source.fixAll": true
+  },
+  "lsp": {
+    // Note, the Zed Ansible extension prefixes all settings with `ansible`
+    // so instead of using `ansible.ansible.path` use `ansible.path`.
+    "ansible-language-server": {
+      "settings": {
+        "ansible": {
+          "path": "ansible"
+        },
+        "executionEnvironment": {
+          "enabled": false
+        },
+        "python": {
+          "interpreterPath": "python3"
+        },
+        "python-refactoring": {
+          "binary": {
+            "path": "/Users/rajmanoh/.local/bin/cst_lsp" // adjust path as needed
+          }
+        },
+        "validation": {
+          "enabled": false, // disable validation
+          "lint": {
+            "enabled": false, // disable ansible-lint
+            "path": "ansible-lint"
+          }
+        }
+      }
+    },
+    "terraform-ls": {
+      "initialization_options": {
+        "experimentalFeatures": {
+          "prefillRequiredFields": true
+        }
+      }
+    },
+    "yaml-language-server": {
+      "settings": {
+        "yaml": {
+          "keyOrdering": true,
+          "format": {
+            "singleQuote": true
+          },
+          "schemas": {
+            "http://json.schemastore.org/composer": ["/*"],
+            "../relative/path/schema.json": ["/config*.yaml"]
+          }
+        }
+      }
+    },
+    "pyright": {
+      "settings": {
+        "python.analysis": {
+          "diagnosticMode": "workspace",
+          "typeCheckingMode": "strict"
+        },
+        "python": {
+          "pythonPath": ".venv/bin/python"
+        }
+      }
+    },
+    "json-language-server": {
+      "settings": {
+        "json": {
+          "schemas": [
+            {
+              "fileMatch": ["*/*.luarc.json"],
+              "url": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json"
+            }
+          ]
+        }
+      }
+    },
+    "gopls": {
+      "initialization_options": {
+        "usePlaceholders": true,
+        "completeUnimported": true,
+        "staticcheck": true,
+        "gofumpt": true,
+        "hints": {
+          "assignVariableTypes": true,
+          "compositeLiteralFields": true,
+          "compositeLiteralTypes": true,
+          "constantValues": true,
+          "functionTypeParameters": true,
+          "parameterNames": true,
+          "rangeVariableTypes": true
+        }
+      }
+    },
+    "pylsp": {
+      "initialization_options": {
+        "settings": {
+          "pylsp": {
+            "plugins": {
+              "pycodestyle": {
+                "enabled": true,
+                "maxLineLength": 88
+              },
+              "pyflakes": {
+                "enabled": true
+              },
+              "pylint": {
+                "enabled": true
+              },
+              "mypy": {
+                "enabled": true,
+                "live_mode": true
+              },
+              "black": {
+                "enabled": true,
+                "line_length": 88
+              },
+              "isort": {
+                "enabled": true
+              },
+              "rope_completion": {
+                "enabled": true
+              },
+              "jedi_completion": {
+                "enabled": true,
+                "include_params": true
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "languages": {
+    "Shell Script": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "shfmt",
+          // Change `--indent 2` to match your preferred tab_size
+          "arguments": ["--filename", "{buffer_path}", "--indent", "2"]
+        }
+      }
+    },
+    "YAML": {
+      "formatter": "language_server"
+    },
+    "Markdown": {
+      "remove_trailing_whitespace_on_save": false,
+      "format_on_save": "on"
+    },
+    "Go": {
+      "tab_size": 4,
+      "hard_tabs": true,
+      "format_on_save": "on",
+      "formatter": "language_server"
+    },
+    "Python": {
+      "tab_size": 4,
+      "hard_tabs": false,
+      "format_on_save": "on",
+      "formatter": "language_server"
+    }
+  },
+  "terminal": {
+    "shell": "system",
+    "font_size": 14
+  },
+  "project_panel": {
+    "dock": "right",
+    "sticky_scroll": true,
+    "default_width": 240
+  },
+  "outline_panel": {
+    "dock": "right",
+    "default_width": 240
+  },
+  "toolbar": {
+    "breadcrumbs": true,
+    // "quick_actions": false,
+    "selections_menu": false
+  }
+}

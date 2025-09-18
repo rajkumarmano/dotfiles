@@ -1,0 +1,74 @@
+{
+  "main": {
+    "prefix": "main",
+    "body": [
+      "if __name__ == \"__main__\":",
+      "\t$1"
+    ]
+  },
+  "class": {
+    "prefix": "class",
+    "body": [
+      "class ${1:ClassName}:",
+      "\tdef __init__(self${2:, args}):",
+      "\t\t$3"
+    ]
+  },
+  "function": {
+    "prefix": "def",
+    "body": [
+      "def ${1:function_name}(${2:args}) -> ${3:return_type}:",
+      "\t\"\"\"${4:docstring}\"\"\"",
+      "\t$5"
+    ]
+  },
+  "method": {
+    "prefix": "method",
+    "body": [
+      "def ${1:method_name}(self${2:, args}) -> ${3:return_type}:",
+      "\t\"\"\"${4:docstring}\"\"\"",
+      "\t$5"
+    ]
+  },
+  "try except": {
+    "prefix": "try",
+    "body": [
+      "try:",
+      "\t$1",
+      "except ${2:Exception} as ${3:e}:",
+      "\t$4"
+    ]
+  },
+  "dataclass": {
+    "prefix": "dataclass",
+    "body": [
+      "@dataclass",
+      "class ${1:ClassName}:",
+      "\t$2"
+    ]
+  },
+  "property": {
+    "prefix": "property",
+    "body": [
+      "@property",
+      "def ${1:property_name}(self) -> ${2:return_type}:",
+      "\treturn self._${1:property_name}"
+    ]
+  },
+  "async function": {
+    "prefix": "async",
+    "body": [
+      "async def ${1:function_name}(${2:args}) -> ${3:return_type}:",
+      "\t\"\"\"${4:docstring}\"\"\"",
+      "\t$5"
+    ]
+  },
+  "test function": {
+    "prefix": "test",
+    "body": [
+      "def test_${1:function_name}():",
+      "\t\"\"\"${2:Test description}\"\"\"",
+      "\t$3"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+.git
+.scripts
+.DS_Store
+
+backup/
+eza/

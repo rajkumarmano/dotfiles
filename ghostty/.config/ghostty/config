@@ -1,0 +1,48 @@
+# font family selection
+# font-family = JetBrainMonoNL Nerd Font Mono
+# font-family = DejaVuSansM Nerd Font Mono
+# font-family = ComicShannsMono Nerd Font Mono
+# font-family = ComicShannsMono Nerd Font
+# font-style = Bold
+font-family = VictorMono Nerd Font Mono
+font-style = SemiBold
+# font-style = Medium
+font-size = 16
+
+# theme selection
+# theme = catppuccin-frappe
+# theme = dark:catppuccin-frappe,light:catppuccin-latte
+# theme = catppuccin-mocha
+theme = dracula
+
+cursor-style = block
+cursor-style-blink = true
+cursor-color = 29b204
+cursor-opacity = 1
+
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 2
+
+macos-titlebar-style = hidden
+# macos-titlebar-style = transparent
+macos-option-as-alt = true
+
+confirm-close-surface = false
+
+window-decoration = true
+window-padding-x = 10
+window-padding-y = 10
+window-padding-balance = true
+window-colorspace = "display-p3"
+
+quick-terminal-position = top
+
+# keybind = global:cmd+/=toggle_quick_terminal
+background-blur-radius = 20
+# background-opacity = 0.9
+
+auto-update = check
+
+# other
+copy-on-select = clipboard
+
